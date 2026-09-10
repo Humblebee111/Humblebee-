@@ -1,1 +1,14 @@
 
+services:
+  - type: web
+    name: ledger-compliance
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PLATFORM_STATUS
+        value: active
+      - key: LICENSE_KEY
+        value: WILSON-ELEC-DEMO-2024
+      - key: NODE_ENV
+        value: production
